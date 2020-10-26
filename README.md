@@ -17,7 +17,7 @@ Once settled in your groups decide who will be the Team Leader
 
 3. Now that you have a remote `dev` branch let's go ahead and set it as the **default** branch of our repository. 
 
-4. Your default branch is named `master`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository. [Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
+4. Your default branch is named `main`. If you have admin rights over a repository on GitHub, you can change the default branch on the repository. [Setting the default branch](https://help.github.com/en/github/administering-a-repository/setting-the-default-branch)
 
 5. In Settings, in the left menu, click Branches.
 
@@ -56,7 +56,7 @@ Update the `dev` to be the default branch.![](assets/dev-default.png)
 
 ```
 * dev
-  master
+  main
 ```
 
 3. Create a branch as yourname-dev 
@@ -104,24 +104,22 @@ no changes added to commit (use "git add" and/or "git commit -a")
 1. On Github, click on the Pull Requests tab. You should see pull requests from all team members.
 
 2. Review pull request
-3. As Git Master you will see the following (pic below)
-- (If you set things up correctly only the git master will be able to see the add your review option)
+3. As Git Tzar you will see the following prompt.
+
+> (If you set things up correctly, only the git tzar will be able to see the add your review option)
 
 # ![](assets/review_merge3.png)
-4. Click on add your review
-5. Once reviewed you will be able to merge the pull request
 
-6. Merge it 
-
+4. Click on "Add Your Review."
+5. Once reviewed, you will be able to merge the pull request.
+6. Merge it.
 7. Select the next pull request and notice there is most likely a merge conflict. 
-
 8. Request the team member to resolve the merge conflict.
 
 
 
-
-
 <br><hr>
+
 ### Team member with a merge conflict
 
 1. Make sure you are on yourname-dev
@@ -163,31 +161,31 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <br><hr>
 ### Team Leader
 
-After you have the changes from all members in the `dev` branch it is time we merge `dev` into `master`. 
+After you have the changes from all members in the `dev` branch it is time we merge `dev` into `main`. 
 
 
-1. `git checkout master`
+1. `git checkout main`
 2. `git pull origin dev`
 3. `git merge dev`
 <!-- The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. -->
-4. `git push origin master`
+4. `git push origin main`
 
 
 
 
 ```
-➜  test-group-git git:(dev) git checkout master
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
-➜  test-group-git git:(master) git merge dev
+➜  test-group-git git:(dev) git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+➜  test-group-git git:(main) git merge dev
 Updating 29fb49d..804ab70
 Fast-forward
  README.md | 5 +----
  1 file changed, 1 insertion(+), 4 deletions(-)
-➜  test-group-git git:(master) git push origin master
+➜  test-group-git git:(main) git push origin main
 Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/svetlasyrimis/test-group-git.git
-   085148e..804ab70  master -> master
+   085148e..804ab70  main -> m
 ```
 
 [e.g. A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
@@ -208,7 +206,3 @@ To https://github.com/svetlasyrimis/test-group-git.git
 
 
 You can read more at Github Help - [Administering a Repository](https://help.github.com/en/github/administering-a-repository)
-
-
- 
-
